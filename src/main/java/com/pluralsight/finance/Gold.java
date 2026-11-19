@@ -16,4 +16,11 @@ public class Gold extends FixedAsset{
     public BigDecimal getValue(){
         return new BigDecimal("120").multiply(BigDecimal.valueOf(weight));
     }
+
+    @Override
+    public String toString() {
+        return "Gold | " +
+                "weight = " + weight +
+                " | value = " + getValue();
+    }
 }

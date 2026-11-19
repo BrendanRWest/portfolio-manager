@@ -26,4 +26,12 @@ public class CreditCard implements Valuable{
     public BigDecimal getValue() {
         return balance.negate();
     }
+
+    @Override
+    public String toString() {
+        return "CreditCard | " +
+                "name = '" + name + '\'' +
+                " | accountNumber = '" + accountNumber + '\'' +
+                " | balance = $" + balance;
+    }
 }

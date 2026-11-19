@@ -14,4 +14,11 @@ public class Jewelry extends FixedAsset{
     public BigDecimal getValue(){
         return new BigDecimal("3500").multiply(BigDecimal.valueOf(carat));
     }
+
+    @Override
+    public String toString() {
+        return "Jewelry |" +
+                " carat = " + carat +
+                " | value: $" + getValue();
+    }
 }

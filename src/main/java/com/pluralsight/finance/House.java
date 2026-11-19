@@ -18,4 +18,13 @@ public class House extends FixedAsset{
     public BigDecimal getValue(){
         return new BigDecimal("50").multiply(new BigDecimal(squareFeet));
     }
+
+    @Override
+    public String toString() {
+        return "House | " +
+                "yearBuilt = " + yearBuilt +
+                " | squareFeet = " + squareFeet +
+                " | bedrooms = " + bedrooms +
+                " | value = " + getValue();
+    }
 }
