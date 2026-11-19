@@ -30,6 +30,11 @@ public class Portfolio {
     }
 
     public Valuable getMostValuable(){
+
+        if(assets.isEmpty()){
+            return null;
+        }
+
         Valuable valuable = assets.get(0);
 
         for (Valuable asset : assets) {
@@ -41,6 +46,11 @@ public class Portfolio {
     }
 
     public Valuable getLeastValuable(){
+
+        if(assets.isEmpty()){
+            return null;
+        }
+
         Valuable valuable = assets.get(0);
 
         for (Valuable asset : assets) {
