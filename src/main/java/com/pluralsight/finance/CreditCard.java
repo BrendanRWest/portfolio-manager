@@ -15,15 +15,15 @@ public class CreditCard implements Valuable{
     }
 
     public void charge(BigDecimal amount){
-        this.balance.subtract(amount);
+        balance = balance.add(amount);
     }
 
     public void pay(BigDecimal amount) {
-        this.balance.add(amount);
+        balance = balance.subtract(amount);
     }
 
     @Override
     public BigDecimal getValue() {
-        return balance;
+        return balance.negate();
     }
 }
