@@ -2,7 +2,7 @@ package com.pluralsight.finance;
 
 import java.math.BigDecimal;
 
-public class FixedAsset implements Valuable{
+public abstract class FixedAsset implements Valuable{
 
     private String name;
 
@@ -11,7 +11,5 @@ public class FixedAsset implements Valuable{
     }
 
     @Override
-    public BigDecimal getValue() {
-        return null;
-    }
+    public abstract BigDecimal getValue();
 }

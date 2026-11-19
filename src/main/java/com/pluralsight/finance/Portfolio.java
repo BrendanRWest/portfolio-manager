@@ -30,33 +30,24 @@ public class Portfolio {
     }
 
     public Valuable getMostValuable(){
-        BigDecimal value = BigDecimal.ZERO;
+        Valuable valuable = assets.get(0);
+
         for (Valuable asset : assets) {
-            if(asset.getValue().compareTo(value) == 1){
-                value = asset.getValue();
+            if(asset.getValue().compareTo(valuable.getValue()) > 0){
+                valuable = asset;
             }
         }
-        for (Valuable asset : assets) {
-            if(asset.getValue().compareTo(value) == 0){
-                return asset;
-            }
-        }
-        return null;
+        return valuable;
     }
 
     public Valuable getLeastValuable(){
-        BigDecimal value = new BigDecimal("1000000000000");
+        Valuable valuable = assets.get(0);
 
         for (Valuable asset : assets) {
-            if(asset.getValue().compareTo(value) == -1){
-                value = asset.getValue();
+            if(asset.getValue().compareTo(valuable.getValue()) < 0){
+                valuable = asset;
             }
         }
-        for (Valuable asset : assets) {
-            if(asset.getValue().compareTo(value) == 0){
-                return asset;
-            }
-        }
-        return null;
+        return valuable;
     }
 }
