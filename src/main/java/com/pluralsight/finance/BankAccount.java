@@ -15,11 +15,11 @@ public class BankAccount implements Valuable{
     }
 
     public void withdraw(BigDecimal amount){
-
+        this.balance = this.balance.subtract(amount);
     }
 
     public void deposit(BigDecimal amount){
-
+        this.balance = this.balance.add(amount);
     }
 
     @Override

@@ -14,10 +14,20 @@ public class FinanceApplication {
 
 
         // This won't work because the input isn't a BigDecimal
-        account1.deposit(100);
+        // account1.deposit(100);
 
-        // This won't work because an interface object doesn't have access to any methods
-        account2.deposit(100);
+        // This won't work because the interface doesn't implement getValue
+        // account2.deposit(100);
+
+        // These should all work
+        System.out.println(account1.getValue());
+        account1.deposit(new BigDecimal("100"));
+        System.out.println(account1.getValue());
+
+        account1.withdraw(new BigDecimal("250"));
+        System.out.println(account1.getValue());
+
+        System.out.println(account2.getValue());
 
     }
 }
